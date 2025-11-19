@@ -1,3 +1,11 @@
+/* Import Royal Bavarian Plain font (user must provide the font file in /fonts/) */
+@font-face {
+    font-family: 'Royal Bavarian Plain';
+    src: url('../fonts/RoyalBavarianPlain.woff2') format('woff2'),
+         url('../fonts/RoyalBavarianPlain.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* =========================
    WRIT 20833 Portfolio Template
    CSS Stylesheet for Research Project Portfolios
@@ -6,15 +14,16 @@
 /* =========================
    CSS Variables (Color Scheme)
    ========================= */
+/* At the top of your CSS, define your colors */
 :root {
-    --primary-color: #4d1979;      /* TCU Purple */
-    --secondary-color: #7c3aed;    /* Light Purple */
-    --accent-color: #ffd700;       /* Gold accent */
+    --primary-color: #bd2d13;      /* saltburn theme colors*/
+    --secondary-color: #9b1313;    /* saltburn theme colors*/
+    --accent-color: #fbc931;       /* Gold accent */
     --text-color: #333;            /* Dark gray for text */
-    --text-secondary: #64748b;     /* Lighter gray for captions */
     --bg-color: #f4f4f4;           /* Light background */
     --white: #ffffff;
 }
+
 
 /* =========================
    Basic Reset & Typography
@@ -30,7 +39,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -52,6 +61,11 @@ header h1 {
     color: white;
     margin: 0 0 0.5rem 0;
     font-size: 2rem;
+    font-family: 'Royal Bavarian Plain', serif;
+/* Paragraphs use Times New Roman */
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
 }
 
 header p {
@@ -61,7 +75,7 @@ header p {
 }
 
 nav {
-    background-color: #3d1461;
+    background-color: #9b1313;
     padding: 0.75rem;
     display: flex;              /* Make nav a flex container */
     justify-content: center;    /* Center the ul inside nav */
