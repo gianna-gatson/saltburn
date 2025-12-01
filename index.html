@@ -52,8 +52,8 @@
             <p><strong>Tools:</strong> Python</p>
             <ul>
                 <li><strong>Term Frequency Analysis:</strong> We used term frequency analysis to identify the most common words appearing in audience reviews of Saltburn from Rotten Tomatoes and YouTube comments. By calculating how often specific words occurred across both datasets, we were able to see which ideas, characters, and themes audiences discussed most frequently. This method helped reveal patterns in how viewers described the movie and provided evidence to support our interpretations about audience engagement and cultural attitudes toward morally complex storytelling. </li>
-                <li><strong>Sentiment Analysis (VADER):</strong> [What sentiment patterns did you look for?]</li>
-                <li><strong>Topic Modeling:</strong> Across both the Youtube comments and Rotten Tomatoes reviews and seven topics, the topics revealed a shared fascination with Saltuburn's characters, psychological themes, and bold stylistic choices. Viewers frequently debated Oliver's motives, his relationships with Felix and Farleigh, and whether his actions stemmed from genuine emotion or calculated manipulation. Many topics focused on psychopathy, sociopathy, and personality disorders, comparing the film to other works like The Talented Mr. Ripley. At the same time, reviewers on Rotten Tomatoes emphasized the film's shocking and disturbing scenes, its dramatic twists, and the tone that left some impressed and others unsettled. Both platforms highlighted Barry Keoghan's preformace and the strength of the supporting cast. The commentary portrays Saltburn as visually striking, emotional divisive, and intense. </li>
+                <li><strong>Sentiment Analysis (VADER):</strong> We used VADER sentiment analysis to assess the emotional tone of the reviews and comments, focusing on the distribution of positive, negative, and neutral sentiments. This was done across Rotten Tomatoes and YouTube videos comment sections, allowing us to deepen our understanding of fan perception of the film and its deeper role in society.</li>
+                <li><strong>Topic Modeling:</strong> Across both the YouTube comments and Rotten Tomatoes reviews and seven topics, the topics revealed a shared fascination with Saltburn's characters, psychological themes, and bold stylistic choices. Viewers frequently debated Oliver's motives, his relationships with Felix and Farleigh, and whether his actions stemmed from genuine emotion or calculated manipulation. Many topics focused on psychopathy, sociopathy, and personality disorders, comparing the film to other works like The Talented Mr. Ripley. At the same time, reviewers on Rotten Tomatoes emphasized the film's shocking and disturbing scenes, its dramatic twists, and the tone that left some impressed and others unsettled. Both platforms highlighted Barry Keoghan's performance and the strength of the supporting cast. The commentary portrays Saltburn as visually striking, emotional divisive, and intense. </li>
             </ul>
         </section>
 
@@ -62,11 +62,11 @@
             <!-- TODO: Add visualizations and code snippets -->
 
             <h3>Sentiment Analysis Results</h3>
-            <p>Using VADER sentiment analysis, I examined [describe what you analyzed]...</p>
+            <p>Using VADER sentiment analysis, I examined audiences' positive and negative feelings toward the film, "Saltburn". The analysis revealed a significant amount of polarized opinions, with many viewers expressing strong emotional reactions to the film's themes and characters.</p>
 
             <!-- Single visualization with caption -->
             <figure class="viz-container">
-                <img src="images/sentiment-distribution.png"
+                <img src="images/youtube-sentiment-distribution.png"
                      alt="Bar chart showing distribution of positive, negative, and neutral sentiment">
                 <figcaption>Figure 1: Distribution of sentiment scores across dataset</figcaption>
             </figure>
@@ -184,7 +184,7 @@ df['sentiment'] = df['compound'].apply(
 
             <h3>Limitations & Future Directions</h3>
             <p><strong>What I would do differently:</strong> [Reflect on your process]</p>
-            <p><strong>Questions that remain:</strong> [What would you investigate with more time?]</p>
+            <p><strong>Questions that remain:</strong> What other factors might influence audience perception of the film? We would like to be able to dive deeper into how different demographics respond to the film's themes.</p>
             <p><strong>Confidence in conclusions:</strong> [How certain are you about your findings? What caveats should readers consider?]</p>
         </section>
     </main>
@@ -193,7 +193,7 @@ df['sentiment'] = df['compound'].apply(
         <p>📊 <strong>Project Materials:</strong>
             <a href="https://github.com/yourusername/project-name">View Google Colab Notebooks & Data on GitHub</a>
         </p>
-        <p>&copy; 2025 Your Name | WRIT 20833: Introduction to Coding in the Humanities</p>
+        <p>&copy; 2025 Gianna Gatson | WRIT 20833: Introduction to Coding in the Humanities</p>
     </footer>
 </body>
 </html>
