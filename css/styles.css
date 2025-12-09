@@ -61,12 +61,14 @@ header h1 {
     color: white;
     margin: 0 0 0.5rem 0;
     font-size: 2rem;
-    font-family: 'Royal Bavarian Plain', serif;
+    font-family: 'Salium', serif;
+}
+
 /* Paragraphs use Times New Roman */
 p {
     font-family: 'Times New Roman', Times, serif;
 }
-}
+
 
 header p {
     margin: 0;

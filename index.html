@@ -84,21 +84,27 @@
             <p>Here's how I implemented the sentiment analysis using <code>vaderSentiment</code>:</p>
 
             <div class="code-title">sentiment_analysis.py</div>
-            <pre><code>from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-import pandas as pd
+            <pre><code># Analyze sentiment patterns in your data
+print("🎭 SENTIMENT ANALYSIS SUMMARY")
+print("=" * 35)
 
-analyzer = SentimentIntensityAnalyzer()
+# Basic statistics
+print(f"Total entries analyzed: {len(df)}")
+print(f"Average sentiment: {df['sentiment_score'].mean():.3f}")
+print(f"Most positive entry: {df['sentiment_score'].max():.3f}")
+print(f"Most negative entry: {df['sentiment_score'].min():.3f}")
+print(f"Standard deviation: {df['sentiment_score'].std():.3f}")
 
-# Analyze sentiment for each text
-df['compound'] = df['text'].apply(
-    lambda x: analyzer.polarity_scores(x)['compound']
-)
+# Categorize sentiments
+positive = len(df[df['sentiment_score'] > 0.1])
+neutral = len(df[(df['sentiment_score'] >= -0.1) & (df['sentiment_score'] <= 0.1)])
+negative = len(df[df['sentiment_score'] < -0.1])
 
-# Classify sentiment
-df['sentiment'] = df['compound'].apply(
-    lambda x: 'positive' if x > 0.05
-    else ('negative' if x < -0.05 else 'neutral')
-)</code></pre>
+print(f"\nSentiment distribution:")
+print(f"Positive (>0.1): {positive} ({positive/len(df)*100:.1f}%)")
+print(f"Neutral (-0.1 to 0.1): {neutral} ({neutral/len(df)*100:.1f}%)")
+print(f"Negative (<-0.1): {negative} ({negative/len(df)*100:.1f}%)")
+</code></pre>
 
             <h3>Topic Modeling Results</h3>
             <p>Using Gensim’s LDA, seven major discussion topics were identified based on frequently used words. From these, Topic 6 from Rotten Tomatoes and Topic 5 from YouTube comments were selected as the most representative for deeper analysis. Terms such as psychopath and sociopath highlight audience focus on mental states and ethical complexity, while names like Oliver, Ollie, and Barry indicate that discussions are strongly centered on specific characters. Overall, these topics reflect strong audience concern with characterization, emotional reactions, and moral ambiguity.
