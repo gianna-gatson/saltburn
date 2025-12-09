@@ -1,3 +1,10 @@
+/* Responsive logo image */
+.responsive-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem auto;
+}
 /* Import Royal Bavarian Plain font (user must provide the font file in /fonts/) */
 @font-face {
     font-family: 'Royal Bavarian Plain';
