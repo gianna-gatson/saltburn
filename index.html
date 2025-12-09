@@ -62,7 +62,7 @@
             <ul>
                 <li><strong>Term Frequency Analysis:</strong> We used term frequency analysis to identify the most common words appearing in audience reviews of Saltburn from Rotten Tomatoes and YouTube comments. By calculating how often specific words occurred across both datasets, we were able to see which ideas, characters, and themes audiences discussed most frequently. This method helped reveal patterns in how viewers described the movie and provided evidence to support our interpretations about audience engagement and cultural attitudes toward morally complex storytelling. </li>
                 <li><strong>Sentiment Analysis (VADER):</strong> We used VADER sentiment analysis to assess the emotional tone of the reviews and comments, focusing on the distribution of positive, negative, and neutral sentiments. This was done across Rotten Tomatoes and YouTube videos comment sections, allowing us to deepen our understanding of fan perception of the film and its deeper role in society.</li>
-                <li><strong>Topic Modeling:</strong> Across both the YouTube comments and Rotten Tomatoes reviews and seven topics, the topics revealed a shared fascination with Saltburn's characters, psychological themes, and bold stylistic choices. Viewers frequently debated Oliver's motives, his relationships with Felix and Farleigh, and whether his actions stemmed from genuine emotion or calculated manipulation. Many topics focused on psychopathy, sociopathy, and personality disorders, comparing the film to other works like The Talented Mr. Ripley. At the same time, reviewers on Rotten Tomatoes emphasized the film's shocking and disturbing scenes, its dramatic twists, and the tone that left some impressed and others unsettled. Both platforms highlighted Barry Keoghan's performance and the strength of the supporting cast. The commentary portrays Saltburn as visually striking, emotional divisive, and intense. </li>
+                <li><strong>Topic Modeling:</strong> Using topic modeling, we analyzed both YouTube comments and Rotten Tomatoes reviews to identify common themes in audience responses. The model grouped words that frequently appeared together into seven topics, which we interpreted as major conversations among viewers. This method helped us understand not only what audiences talked about most, but also how these ideas connected into broader themes that revealed shared patterns of engagement across both platforms. </li>
             </ul>
         </section>
 
@@ -116,19 +116,7 @@ print(f"Negative (<-0.1): {negative} ({negative/len(df)*100:.1f}%)")
 <img src="images/Youtube_Comments TM.png" width="550">
             <figcaption>Figure 2: Most frequently used topics on Youtube Comments </figcaption>
 
-            <!-- Multiple visualizations in a grid -->
-            <div class="viz-grid">
-                <figure class="viz-container">
-                    <img src="images/topic-model.png"
-                         alt="Visualization of topic clusters from LDA analysis">
-                    <figcaption>Figure 2: Topic clusters from LDA analysis</figcaption>
-                </figure>
-
-                <figure class="viz-container">
-                    <img src="images/word-cloud.png"
-                         alt="Word cloud showing most frequent terms">
-                    <figcaption>Figure 3: Most common terms in the corpus</figcaption>
-                </figure>
+            
 
                 <h3>Term Frequency Results</h3>
             <p>The term frequency analysis shows that Rotten Tomatoes reviewers focused on narrative elements, using words like movie, character, plot, and twist, indicating strong engagement with Saltburn’s complexity and shocking moments. YouTube commenters, however, centered on characters and morality, with frequent terms like he, his, Oliver, and Felix, suggesting deeper discussion about motivations and ethical ambiguity. Overall, the results support the idea that audiences today are drawn to morally complex, psychologically intense films that encourage interpretation rather than offering clear answers.</p>
@@ -196,7 +184,7 @@ print(f"Negative (<-0.1): {negative} ({negative/len(df)*100:.1f}%)")
             </table>
 
             <h3>What Surprised Me</h3>
-            <p>I initially predicted that [your assumption], but the data revealed [what actually happened]. This challenged my understanding because...</p>
+            <p>We initially predicted that viewers would focus on Saltburn’s unclear morals and criticize the film for being confusing, but the data revealed something very different. Instead of frustration, people were drawn to the movie’s intensity, visuals, and overall weirdness. This challenged our understanding because it showed that audiences today value ambiguity and unsettling storytelling, rather than preferring basic plots or clear messages.</p>
         </section>
 
         <section id="reflection">
@@ -206,25 +194,26 @@ print(f"Negative (<-0.1): {negative} ({negative/len(df)*100:.1f}%)")
             <p>This project demonstrates what happens when coding meets culture by revealing insights that neither computational analysis nor traditional close reading could discover alone.</p>
 
             <h3>Integration of Methods</h3>
-            <p><strong>What computational methods revealed:</strong> [Describe patterns only visible through large-scale analysis]</p>
-            <p><strong>What close reading added:</strong> [Describe how interpretive work enriched the computational findings]</p>
+            <p><strong>What computational methods revealed:</strong> The computational tools allowed us to see overall trends in how audiences reacted to Saltburn that would not be obvious from reading a few comments alone. The sentiment analysis showed that audience reactions were highly polarized, with almost half of the comments being positive (48.65%) and nearly one-third negative (29.00%), meaning viewers tended to feel strongly either for or against the film rather than remaining neutral. Topic modeling further revealed that discussions consistently centered on character psychology and moral judgment, as shown by frequent words such as psychopath, sociopath, and character names like Oliver and Felix. Term frequency analysis highlighted differences in how people talked about the film across platforms: Rotten Tomatoes users discussed narrative elements like plot, twist, and character, while YouTube commenters focused more on specific people and actions in the story. Together, these methods revealed large-scale patterns of emotional engagement and moral debate that could not be captured through traditional close reading alone.</p>
+            <p><strong>What close reading added:</strong> Close reading helped us understand the meaning behind these patterns by examining how viewers explained their reactions in individual comments. Looking closely at references to major scenes like the bathtub, graveyard, and vampire moments showed that both praise and criticism centered on the same shocking sequences. This deeper analysis clarified why the sentiment was so divided: audiences were responding to the same elements but interpreting them differently. Close reading therefore added emotional and cultural context to the computational findings, showing how personal values and expectations about filmmaking shaped audience responses.</p>
 
             <div class="framework-callout">
                 <h3>📐 Classification Logic</h3>
-                <p>This project connects to <strong>Classification Logic</strong> by revealing how algorithmic categorization shapes our understanding of [your topic]. [Explain the connection...]</p>
+                <p>This project connects to <strong>Classification Logic</strong> This project connects to Classification Logic by showing how algorithmic grouping and labeling shape our understanding of audience reactions to morally complex films like Saltburn. Through sentiment analysis, comments were sorted into categories of positive, neutral, or negative, and topic modeling organized audience language into seven groups. These forms of classification revealed large patterns, such as strong emotional division and consistent focus on certain characters' psychology, but they also simplified how viewers actually expressed themselves. Many comments contained mixed or conflicted emotions, such as admiration for the film’s artistic style alongside discomfort with its gruesome content, yet these responses were placed into a single sentiment category. This shows how classification systems can make trends easier to study at scale while also limiting how fully individual emotional experiences are represented.</p>
 
-                <p><em>Critical question:</em> What nuances are lost when we reduce complex cultural expressions to computational categories?</p>
+                <p><em>Critical question:</em> What nuances are lost when we reduce complex cultural expressions to computational categories? 
+                 When audience reactions are reduced to categories like “positive” or “negative,” important reactions such as sarcasm, conflicting emotions, and other interpretations are lost. Viewers who felt both disturbed and impressed by Saltburn were classified under only one emotional label, which skewed the results quite a bit. In addition, topic modeling groups words based on frequency rather than the reviews actual intention, which can overlook tone, symbolism, or cultural meaning in the viewers commentary. This simplifies the reviewers reaction and makes it more uniform instead of reading into the complexities of the comment. </p>
             </div>
 
             <div class="framework-callout">
                 <h3>🤖 AI Agency</h3>
-                <p>The use of topic modeling and sentiment analysis demonstrates <strong>AI Agency</strong> concerns. While the algorithms appear to "discover" meaning, the interpretation and framing of results remains entirely human. [Explain further...]</p>
+                <p> The use of topic modeling and sentiment analysis in this project highlights key concerns related to AI Agency. Although the algorithms appear to “discover” themes and sentiments, they do not interpret meaning on their own. Our group of researchers selected the tools, cleaned the data, classified each data set, chose which topics were “most representative,” and interpreted what those topics meant in relation to culture and morality. AI identified word groupings and sentiment scores, but it was our human judgment that transformed these outputs into meaningful claims about audience psychology and film culture. While AI played a powerful role in our data analysis it doesn't generate understanding. Without our own analysis of the data the AI results could mislead or misconstrue our findings. Therefore, this project shows that AI can help us get to our results faster but the final interpretation of the anaylsis remains a humans responsiblity.</p>
             </div>
 
             <h3>Limitations & Future Directions</h3>
             <p><strong>What I would do differently:</strong> We focused only on non-critic audience comments, but incorporating professional critics’ reviews would provide a valuable additional dataset for comparison. We also limited our analysis to two platforms; expanding to more sites could have offered a broader view of audience reactions, though the time required would have made that difficult within a single semester. </p>
             <p><strong>Questions that remain:</strong> With more time, we could investigate how professional critics’ reviews compare to audience sentiment, examine differences across multiple platforms to see how community norms shape reactions, and track how opinions change over time after the film’s release. </p>
-            <p><strong>Confidence in conclusions:</strong> [How certain are you about your findings? What caveats should readers consider?]</p>
+            <p><strong>Confidence in conclusions:</strong> We are confident in our findings because similar themes appeared across both platforms.The data produced clear and consistent patterns that matched close readings of the comments. However, the data represents only people who chose to post online, not all viewers. Because we studied only two platforms, the conclusions may not generalize to other communities. The findings reflect prominent discussions in these spaces rather than overall audience opinion.</p>
         </section>
     </main>
 
@@ -232,7 +221,7 @@ print(f"Negative (<-0.1): {negative} ({negative/len(df)*100:.1f}%)")
         <p>📊 <strong>Project Materials:</strong>
             <a href="https://github.com/yourusername/project-name">View Google Colab Notebooks & Data on GitHub</a>
         </p>
-        <p>&copy; 2025 Gianna Gatson | WRIT 20833: Introduction to Coding in the Humanities</p>
+        <p>&copy; 2025 Gianna Gatson Bianca Medina Isabellla Nastas | WRIT 20833: Introduction to Coding in the Humanities</p>
     </footer>
 </body>
 </html>
